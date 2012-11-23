@@ -1,30 +1,50 @@
-[user]
-    name = John Anderson
-    email = sontek@gmail.com
+[branch "master"]
+        remote = origin
+        merge = refs/heads/master
+        rebase = true
+[branch]
+        autosetuprebase = remote
 
 [color]
-    diff = auto
-    status = auto
-    branch = auto
-    ui = auto
-
-[push]
-    default = matching
-
-[core]
-    editor = vim
-    pager = less -R
+	ui = true
+[color "branch"]
+    current = yellow reverse
+    local = yellow
+    remote = green
+[color "diff"]
+    meta = yellow bold
+    frag = magenta bold
+    old = red bold
+    new = green bold
+[color "status"]
+    added = yellow
+    changed = green
+    untracked = cyan
 
 [alias]
-    diverges = !bash -c 'diff -u <(git rev-list --first-parent "${1}") <(git rev-list --first-parent "${2:-HEAD}") | sed -ne \"s/^ //p\" | head -1' -
-    st = status
+    gpre = grep
+    st = status -sb
     ci = commit
     br = branch
     co = checkout
     df = diff
-    lg = log -p
-    up = !sh -c 'git pull --rebase --prune && git log --pretty=format:\"%Cred%ae %Creset- %C(yellow)%s %Creset(%ar)\" HEAD@{1}..'
-    lol = log --graph --decorate --pretty=oneline --abbrev-commit
-    lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-    ls = ls-files
+    lg0 = log -p -U
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    hist = log --all --graph --pretty
+    tree = log --graph --pretty=oneline --abbrev-commit --decorate --color
+    up = pull --rebase
+    local = @{u}..HEAD
+	rtp = !./run_tests.py && git push
+    count = shortlog -sn 
+    status = status -sb
+	tree2 = log --graph --pretty=oneline --abbrev-commit --decorate --color
 
+[user]
+    name = Masayoshi Sekimura
+    email = msekimura@saymedia.com
+
+[core]
+	pager = less
+	editor = vim
+[remote "review"]
+	push = HEAD:refs/for/master
