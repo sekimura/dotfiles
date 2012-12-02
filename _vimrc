@@ -275,6 +275,12 @@ let g:acp_completeoptPreview=1
 autocmd BufNewFile,BufRead *.mako,*.mak,*.jinja2 setlocal ft=html
 autocmd FileType html,xhtml,xml,css setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
+" Golang
+"
+set rtp+=$GOROOT/misc/vim
+filetype plugin     indent on
+"au FileType go setlocal expandtab shiftwidth=8 tabstop=8 softtabstop=8 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
+
 " Python
 "au BufRead *.py compiler nose
 au FileType python set omnifunc=pythoncomplete#Complete
@@ -306,3 +312,4 @@ if filereadable($VIRTUAL_ENV . '/.vimrc')
 endif
 
 set colorcolumn=79
+
