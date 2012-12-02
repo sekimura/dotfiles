@@ -7,44 +7,24 @@
 
 [color]
 	ui = true
-[color "branch"]
-    current = yellow reverse
-    local = yellow
-    remote = green
-[color "diff"]
-    meta = yellow bold
-    frag = magenta bold
-    old = red bold
-    new = green bold
-[color "status"]
-    added = yellow
-    changed = green
-    untracked = cyan
 
 [alias]
     gpre = grep
-    st = status -sb
     ci = commit
     br = branch
     co = checkout
     df = diff
-    lg0 = log -p -U
     lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+    st = status -sb
     hist = log --all --graph --pretty
     tree = log --graph --pretty=oneline --abbrev-commit --decorate --color
     up = pull --rebase
-    local = @{u}..HEAD
-	rtp = !./run_tests.py && git push
     count = shortlog -sn 
-    status = status -sb
-	tree2 = log --graph --pretty=oneline --abbrev-commit --decorate --color
 
 [user]
     name = Masayoshi Sekimura
-    email = msekimura@saymedia.com
+    email = sekimura@gmail.com
 
 [core]
 	pager = less
 	editor = vim
-[remote "review"]
-	push = HEAD:refs/for/master
