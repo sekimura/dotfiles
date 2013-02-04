@@ -314,3 +314,6 @@ endif
 
 set colorcolumn=79
 
+" Set the directory of the swap file
+" The // indicates that the swap name should be globally unique
+set directory=~/.vim/tmp//,/tmp
