@@ -69,4 +69,4 @@
 	url = https://github.com/jnwhiteh/vim-golang.git
 [submodule "_vim/bundle/ctrlp.vim"]
 	path = _vim/bundle/ctrlp.vim
-    url = https:/github.com/kien/ctrlp.vim.git
+	url = https://github.com/kien/ctrlp.vim
