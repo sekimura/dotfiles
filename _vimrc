@@ -317,3 +317,18 @@ set colorcolumn=79
 " Set the directory of the swap file
 " The // indicates that the swap name should be globally unique
 set directory=~/.vim/tmp//,/tmp
+
+
+" Some Linux distributions set filetype in /etc/vimrc.
+" Clear filetype flags before changing runtimepath to force Vim to reload them.
+filetype off
+filetype plugin indent off
+set runtimepath+=$GOROOT/misc/vim
+filetype plugin indent on
+syntax on
+
+" A popular configuration is to gofmt Go source files when they are saved.
+" To do that, add this line to the end of your $HOME/.vimrc.
+autocmd FileType go autocmd BufWritePre <buffer> Fmt
+
+
