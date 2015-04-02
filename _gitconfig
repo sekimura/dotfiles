@@ -11,6 +11,7 @@
 
 [alias]
     gpre = grep
+    grpe = grep
     ci = commit
     br = branch -v
     co = checkout
@@ -27,5 +28,7 @@
     email = sekimura@gmail.com
 
 [core]
-    pager = less
-    editor = vim
+	pager = less
+	editor = vim
+	autocrlf = false
+	filemode = false

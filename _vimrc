@@ -272,14 +272,19 @@ let g:acp_completeoptPreview=1
 " FileType specific changes
 " ============================================================
 " Mako/HTML
-autocmd BufNewFile,BufRead *.mako,*.mak,*.jinja2 setlocal ft=html
+autocmd BufNewFile,BufRead *.mako,*.mak,*.jinja2,*scss setlocal ft=html
+autocmd BufNewFile,BufRead *.scss,*sass setlocal ft=css
 autocmd BufNewFile,BufRead *.json setlocal ft=json
 autocmd FileType javascript,json,html,xhtml,xml,css setlocal expandtab shiftwidth=2 tabstop=2 softtabstop=2
 
 " Golang
 "
 set rtp+=$GOROOT/misc/vim
-filetype plugin     indent on
+filetype plugin on
+let g:go_fmt_command = "goimports"
+"
+"
+"
 "au FileType go setlocal expandtab shiftwidth=8 tabstop=8 softtabstop=8 smartindent cinwords=if,elif,else,for,while,try,except,finally,def,class,with
 
 " Python
@@ -332,3 +337,11 @@ syntax on
 autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
 
+" ctrlp
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+nnoremap Q gqip
+set spell
+
+
+autocmd BufRead,BufNewFile *.es6 setfiletype javascript
