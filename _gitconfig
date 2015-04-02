@@ -28,7 +28,7 @@
     email = sekimura@gmail.com
 
 [core]
-	pager = less
-	editor = vim
-	autocrlf = false
-	filemode = false
+    pager = less
+    editor = vim
+    autocrlf = false
+    filemode = false
