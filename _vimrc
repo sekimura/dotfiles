@@ -345,3 +345,7 @@ set spell
 
 
 autocmd BufRead,BufNewFile *.es6 setfiletype javascript
+
+" https://github.com/plasticboy/vim-markdown
+set nofoldenable    " disable folding
+let g:vim_markdown_folding_disabled=1
