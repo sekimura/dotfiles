@@ -78,15 +78,11 @@
 	path = _vim/bundle/coffee
 	url = https://github.com/kchmck/vim-coffee-script.git
 	ignore = dirty
-[submodule "_vim/bundle/vim-colors-solarized"]
-	path = _vim/bundle/vim-colors-solarized
-	url = https://github.com/altercation/vim-colors-solarized.git
-	ignore = dirty
-[submodule "_vim/bundle/golang"]
-	path = _vim/bundle/golang
-	url = https://github.com/jnwhiteh/vim-golang.git
-	ignore = dirty
 [submodule "_vim/bundle/ctrlp.vim"]
 	path = _vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim
+	ignore = dirty
+[submodule "_vim/bundle/vim-go"]
+	path = _vim/bundle/vim-go
+	url = https://github.com/fatih/vim-go.git
 	ignore = dirty

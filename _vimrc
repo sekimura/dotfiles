@@ -276,7 +276,7 @@ autocmd FileType javascript,json,html,xhtml,xml,css setlocal expandtab shiftwidt
 
 " Golang
 "
-set rtp+=$GOROOT/misc/vim
+"set rtp+=$GOROOT/misc/vim
 filetype plugin on
 let g:go_fmt_command = "goimports"
 "
@@ -325,13 +325,14 @@ set directory=~/.vim/tmp//,/tmp
 " Clear filetype flags before changing runtimepath to force Vim to reload them.
 filetype off
 filetype plugin indent off
-set runtimepath+=$GOROOT/misc/vim
-filetype plugin indent on
-syntax on
 
-" A popular configuration is to gofmt Go source files when they are saved.
-" To do that, add this line to the end of your $HOME/.vimrc.
-autocmd FileType go autocmd BufWritePre <buffer> Fmt
+" set runtimepath+=$GOROOT/misc/vim
+filetype plugin indent on
+" syntax on
+" 
+" " A popular configuration is to gofmt Go source files when they are saved.
+" " To do that, add this line to the end of your $HOME/.vimrc.
+" autocmd FileType go autocmd BufWritePre <buffer> Fmt
 
 
 " ctrlp
