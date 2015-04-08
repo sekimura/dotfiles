@@ -5,7 +5,6 @@
 " Pep8 - http://pypi.python.org/pypi/pep8
 " Pyflakes
 " Ack
-" Rake & Ruby for command-t
 " nose, django-nose
 
 " ==========================================================
@@ -113,8 +112,6 @@ imap <C-W> <C-O><C-W>
 " Open NerdTree
 map <leader>n :NERDTreeToggle<CR>
 
-" Run command-t file search
-map <leader>f :CommandT<CR>
 " Ack searching
 nmap <leader>a <Esc>:Ack!
 
