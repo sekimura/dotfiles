@@ -7,3 +7,5 @@ export PATH=$GOPATH/bin:$PATH
 
 source $HOME/.git-completion.bash
 source $HOME/.ultimate-git-ps1-prompt.bash
+
+export HISTTIMEFORMAT="%d/%m/%y %T "
