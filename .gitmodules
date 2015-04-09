@@ -86,3 +86,7 @@
 	path = _vim/bundle/vim-go
 	url = https://github.com/fatih/vim-go.git
 	ignore = dirty
+[submodule "_vim/bundle/swift.vim"]
+	path = _vim/bundle/swift.vim
+	url = https://github.com/Keithbsmiley/swift.vim.git
+	ignore = dirty
