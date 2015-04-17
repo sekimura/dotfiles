@@ -22,10 +22,13 @@
     tree = log --graph --pretty=oneline --abbrev-commit --decorate --color
     up = pull --rebase
     count = shortlog -sn 
-
-[user]
-    name = Masayoshi Sekimura
-    email = sekimura@gmail.com
+    change = codereview change
+    gofmt = codereview gofmt
+    mail = codereview mail
+    pending = codereview pending
+    rebase-work = codereview rebase-work
+    submit = codereview submit
+    sync = codereview sync
 
 [core]
     pager = less
