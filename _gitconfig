@@ -35,3 +35,4 @@
     editor = vim
     autocrlf = false
     filemode = false
+    excludesfile = /Users/msekimura/.gitignore_global
