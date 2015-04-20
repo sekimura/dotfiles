@@ -5,3 +5,6 @@ _vim/ropevim/src*
 _vim/ropevim/pylibs*
 *.swp
 *.pyc
+
+_vim/spell/en.utf-8.add
+_vim/spell/en.utf-8.add.spl
