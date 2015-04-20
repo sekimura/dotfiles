@@ -347,3 +347,11 @@ autocmd BufRead,BufNewFile *.es6 setfiletype javascript
 " https://github.com/plasticboy/vim-markdown
 set nofoldenable    " disable folding
 let g:vim_markdown_folding_disabled=1
+
+
+" https://github.com/mitchellh/vagrant/blob/master/contrib/vim/vagrantfile.vim
+augroup vagrant
+	au!
+	au BufRead,BufNewFile Vagrantfile set filetype=ruby
+	au BufRead,BufNewFile Vagrantfile.proxy set filetype=ruby
+augroup END
